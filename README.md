@@ -39,6 +39,9 @@ https://imputationserver.sph.umich.edu/index.html
 
      ls -1 | grep dose | sed 's/vcf.gz//g' | awk {'print "bcftools view -i '\''R2>.8'\'' -Oz " $1"vcf.gz > " $1 "filtered.vcf.gz;tabix -p vcf " $1 "filtered.vcf.gz"'} > RUN_FILTER.sh 
      
+optional filter for MAF
+
+    bcftools view -i 'AF>.01' chr22.dose.filtered.vcf.gz | grep ^# -v | wc -l
      
 ### Number of variants
 

@@ -53,3 +53,14 @@ optional filter for MAF
 ```{r}
 java -jar -Xmx16024m SnpSift.jar annotate dbSnp132.vcf variants.vcf > variants_annotated.dvcf
 ```     
+
+### or bcftools
+
+```{r}
+bcftools annotate \
+  -a 00-common_all.vcf.gz \
+  -c ID mydata.vcf.gz \
+  --output-type z \
+  -o mydata_dbSNP151.vcf.gz
+
+```     

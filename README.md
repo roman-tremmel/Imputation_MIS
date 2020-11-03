@@ -47,4 +47,8 @@ optional filter for MAF
 
     zcat chr*.dose.filtered.vcf.gz | grep ^# -v | wc -l
     
+    
+### add rsID using snpSift/snpEff
+
+java -jar -Xmx16024m SnpSift.jar annotate dbSnp132.vcf variants.vcf > variants_annotated.dvcf
      

@@ -50,5 +50,6 @@ optional filter for MAF
     
 ### add rsID using snpSift/snpEff
 
+```{r}
 java -jar -Xmx16024m SnpSift.jar annotate dbSnp132.vcf variants.vcf > variants_annotated.dvcf
-     
+```     
